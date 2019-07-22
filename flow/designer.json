@@ -1,0 +1,320 @@
+{
+	"tabs": [
+		{
+			"id": "1551338900740",
+			"name": "Main",
+			"icon": "fa-object-ungroup",
+			"linker": "main",
+			"index": 0
+		}
+	],
+	"components": [
+		{
+			"id": "1551432669079",
+			"component": "trigger",
+			"tab": "1551338900740",
+			"name": "Hello world!",
+			"x": 152,
+			"y": 76,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1551432671350"
+					},
+					{
+						"index": "0",
+						"id": "1551554688376"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"data": "Hello world!",
+				"datatype": "string"
+			},
+			"color": "#F6BB42",
+			"notes": ""
+		},
+		{
+			"id": "1551432671350",
+			"component": "debug",
+			"tab": "1551338900740",
+			"name": "Debug",
+			"x": 799,
+			"y": 71,
+			"connections": {},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "Enabled",
+				"color": "gray"
+			},
+			"options": {
+				"enabled": true,
+				"repository": false,
+				"type": "data",
+				"logger": false
+			},
+			"color": "#967ADC",
+			"notes": ""
+		},
+		{
+			"id": "1551554599442",
+			"component": "trigger",
+			"tab": "1551338900740",
+			"name": "Hello World",
+			"x": 151,
+			"y": 190,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1551554601940"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"data": "Hello World!",
+				"datatype": "string",
+				"debug": true
+			},
+			"color": "#F6BB42",
+			"notes": ""
+		},
+		{
+			"id": "1551554601940",
+			"component": "code",
+			"tab": "1551338900740",
+			"name": "UpperCase",
+			"x": 488,
+			"y": 318,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1551432671350"
+					},
+					{
+						"index": "0",
+						"id": "1551554677811"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"outputs": 1,
+				"code": "send(0, value.toUpperCase());",
+				"keepmessage": true
+			},
+			"color": "#656D78",
+			"notes": ""
+		},
+		{
+			"id": "1551554677811",
+			"component": "counter",
+			"tab": "1551338900740",
+			"name": "Counter",
+			"x": 792,
+			"y": 315,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1563788315048"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "1",
+				"color": "gray"
+			},
+			"options": {
+				"enabled": true
+			},
+			"color": "#656D78",
+			"notes": ""
+		},
+		{
+			"id": "1551554688376",
+			"component": "counter",
+			"tab": "1551338900740",
+			"name": "Counter",
+			"x": 499,
+			"y": 167,
+			"connections": {},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "0",
+				"color": "gray"
+			},
+			"options": {
+				"enabled": true
+			},
+			"color": "#656D78",
+			"notes": ""
+		},
+		{
+			"id": "1551554714278",
+			"component": "timer",
+			"tab": "1551338900740",
+			"name": "5 seconds interval",
+			"x": 290,
+			"y": 553,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1551554736718"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"interval": 5000,
+				"data": "0",
+				"datatype": "integer"
+			},
+			"color": "#F6BB42",
+			"notes": ""
+		},
+		{
+			"id": "1551554736718",
+			"component": "code",
+			"tab": "1551338900740",
+			"name": "Code",
+			"x": 486,
+			"y": 510,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1551555014644"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"keepmessage": true,
+				"code": "send(0, { now: new Date() });",
+				"outputs": 1
+			},
+			"color": "#656D78",
+			"notes": ""
+		},
+		{
+			"id": "1551555014644",
+			"component": "merge",
+			"tab": "1551338900740",
+			"name": "5 merged values",
+			"x": 735,
+			"y": 632,
+			"connections": {},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "4x pending",
+				"color": "red"
+			},
+			"options": {
+				"timeout": 0,
+				"id": false,
+				"count": 5
+			},
+			"color": "#656D78",
+			"notes": ""
+		},
+		{
+			"id": "1563273950501",
+			"component": "trigger",
+			"tab": "1551338900740",
+			"name": "Trigger",
+			"x": 1082,
+			"y": 215,
+			"connections": {},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {},
+			"color": "#F6BB42",
+			"notes": ""
+		},
+		{
+			"id": "1563788315048",
+			"component": "debug",
+			"tab": "1551338900740",
+			"name": "Debug",
+			"x": 1037,
+			"y": 389,
+			"connections": {},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "Enabled",
+				"color": "gray"
+			},
+			"options": {
+				"type": "data",
+				"repository": false,
+				"enabled": true
+			},
+			"color": "#967ADC",
+			"notes": ""
+		}
+	],
+	"version": 611
+}
